@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="navi.css">
+    <link rel="stylesheet" text="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <div class="head">
+        <div class="header">
+            <div class="logo">
+                <h1>Logo</h1>
+            </div>
+            <div class="menu">
+                <button onclick="showmenu()" class="menu1" ><i class="fa-solid fa-bars"></i></button>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <a href=""><li>Home</li></a>
+                    <a href=""><li>About us</li></a>
+                    <a href=""><li>Contact us</li></a>
+                    <a href=""><li>more</li></a>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="menubar" id="myDropdown">
+        <button onclick="notshow()"><i class="fa-solid fa-x"></i></button>
+        <nav class="nav1">
+            <ul>
+                <a href=""><li>Home</li></a>
+                <a href=""><li>About us</li></a>
+                <a href=""><li>Contact us</li></a>
+                <a href=""><li>more</li></a>
+            </ul>
+        </nav>
+    </div>
+    <script>
+        let myDropdown=document.getElementById("myDropdown");
+        function showmenu(){
+            myDropdown.classList.toggle("open-menu");
+            myDropdown.classList.remove("close-menu");
+        
+        }
+        function notshow(){
+            myDropdown.classList.add("close-menu");
+            myDropdown.classList.remove("open-menu");
+        }
+        // window.onclick=function(e){
+        //     if(!e.target.matches('.menu1')){
+        //         var dropdowns=document.getElementsByClassName("menubar");
+        //         let i;
+        //         for(i=0;i<dropdowns.length;i++)
+        //         {
+        //             let openDrop=dropdowns[i];
+        //             if(openDrop.classList.contains('show'))
+        //             {
+        //                 openDrop.classList.remove('show');
+        //             }
+        //         }
+        //     }
+        // }
+    </script>
+</body>
+</html>
